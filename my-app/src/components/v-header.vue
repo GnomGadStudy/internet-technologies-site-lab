@@ -1,5 +1,5 @@
 <template>
-    <header id="v-header" class="navbar-fixed">
+    <header id="v-header">
     <nav >
       <div class="nav-wrapper lime  darken-4">
         <a href="#" class="brand-logo center black-text">Кафка</a>
@@ -24,8 +24,16 @@
 </template>
 
 <script>
+import M from 'materialize-css';
+
 export default {
+
   name: 'v-header',
+  data: () => ({}),
+  mounted() {
+    const elems = document.querySelectorAll('.sidenav');
+    M.Sidenav.init(elems);
+  },
 };
 </script>
 
